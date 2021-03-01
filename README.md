@@ -10,11 +10,11 @@ Juntamente com a Graal VM, conseguimos criar a imagem nativa das nossas aplicaç
 o que significa que teremos um executável que será executado em linguagem de máquina, 
 com um tamanho extremamente pequeno.
 
-************************************************************************************************************************
+**************************************************************************************************
 cd quarkus/bitcoin
 mvn clean install quarkus:dev                           <- Start
 
-************************************************************************************************************************
+**************************************************************************************************
 Gerando imagem nativa - arquivo menor e start mais rápido
 package -Pnative -Dquarkus.native.container-build=true  <- Criar um run maven
 ./bitcoin-1.0.0-SNAPSHOT-runner                         <- Start Imagem nativa, muito rápido \0/
