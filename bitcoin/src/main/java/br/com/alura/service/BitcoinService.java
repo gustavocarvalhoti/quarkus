@@ -9,8 +9,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
+/**
+ * configKey = "bitcoin-api" <- Utilizada no application.properties
+ * @Path("/bitcoins") <- Da API que vou chamar - https://alura-bitcoin.herokuapp.com/bitcoins
+ */
 @Path("/bitcoins")
-@RegisterRestClient
+@RegisterRestClient(configKey = "bitcoin-api")
 public interface BitcoinService {
 
     @GET

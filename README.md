@@ -20,10 +20,10 @@ package -Pnative -Dquarkus.native.container-build=true  <- Criar um run maven
 ./bitcoin-1.0.0-SNAPSHOT-runner                         <- Start Imagem nativa, muito rápido \0/
 ````
 
-![img_1.png](img_1.png)
-![img.png](img.png)
-![img_3.png](img_3.png)
-![img_2.png](img_2.png)
+![img1.png](img1.png)
+![img2.png](img2.png)
+![img3.png](img3.png)
+![img4.png](img4.png)
 
 ## Instalar
 
@@ -33,7 +33,12 @@ https://code.quarkus.io     -> Criar o projeto nessa URL
 
 cd graalvm/graalvm-ce-java11-21.0.0.2/bin
 ./gu install native-image
+
+MySQL no Docker ->
+docker run --name mysql8 --network host -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
 ````
+
+![img5.png](img5.png)
 
 ## Dependências
 
@@ -51,6 +56,42 @@ cd graalvm/graalvm-ce-java11-21.0.0.2/bin
     <groupId>io.quarkus</groupId>
     <artifactId>quarkus-resteasy-jsonb</artifactId>
 </dependency>
+<dependency>                    -> Para executar os testes
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <scope>test</scope>
+</dependency>
+<dependency>                    -> MySQL
+    <groupId>io.quarkus</groupId>
+    <artifactId>quarkus-jdbc-mysql</artifactId>
+</dependency>
+<dependency>                    -> ORM
+    <groupId>io.quarkus</groupId>
+    <artifactId>quarkus-hibernate-orm-panache</artifactId>
+</dependency>
+````
+
+## Injeção de dependências - @Inject
+````
+javax.enterprise.context.ApplicationScoped: 
+Uma única instância do bean é criada e compartilhada por todos os pontos de injeção. 
+A instância é criada de forma “preguiçosa” (lazily), ou seja, quando um método é invocado através de um client proxy.
+
+Client proxy: 
+Um proxy de cliente é basicamente um objeto que delega todas as invocações de método para uma instância de bean de destino. 
+É uma construção de container que implementa io.quarkus.arc.ClientProxy e estende a classe de bean. 
+Os proxies de cliente apenas delegam invocações de método.
+
+javax.inject.Singleton: 
+Mesma ideia do @ApplicationScoped, porém aqui o client proxy não é utilizado, 
+a instância é criada quando um ponto de injeção que resolve para um bean @Singleton está sendo injetado.
+
+javax.enterprise.context.RequestScope: 
+A instância é associada à requisição, ou seja, uma instância para cada requisição.
+
+javax.enterprise.context.Dependent: 
+O ciclo de vida do @Dependent é limitado ao bean que o injeta. 
+Ele será criado e destruído com o bean que o injeta.
 ````
 
 ### Créditos Alura
