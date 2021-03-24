@@ -24,6 +24,16 @@ package -Pnative -Dquarkus.native.container-build=true  <- Criar um run maven
 ![img2.png](img2.png)
 ![img3.png](img3.png)
 ![img4.png](img4.png)
+![img6.png](img6.png)
+
+## Tecnologias e metodologias utilizadas
+
+````
+Quarkus
+MySQL
+Validação de perfil - rules com quarkus-security
+ORM
+````
 
 ## Instalar
 
@@ -43,7 +53,7 @@ docker run --name mysql8 --network host -e MYSQL_ROOT_PASSWORD=root -d mysql:lat
 ## Dependências
 
 ````
-<dependency>                    -> Para utilizar Rest
+<dependency>                        -> Rest
     <groupId>io.quarkus</groupId>
     <artifactId>quarkus-rest-client</artifactId>
 </dependency>
@@ -52,26 +62,31 @@ docker run --name mysql8 --network host -e MYSQL_ROOT_PASSWORD=root -d mysql:lat
     <artifactId>microprofile-rest-client-api</artifactId>
     <version>1.4.1</version>
 </dependency>
-<dependency>                    -> Para utilizar JSON
+<dependency>                        -> JSON
     <groupId>io.quarkus</groupId>
     <artifactId>quarkus-resteasy-jsonb</artifactId>
 </dependency>
-<dependency>                    -> Para executar os testes
+<dependency>                        -> Testes
     <groupId>io.rest-assured</groupId>
     <artifactId>rest-assured</artifactId>
     <scope>test</scope>
 </dependency>
-<dependency>                    -> MySQL
+<dependency>                        -> MySQL
     <groupId>io.quarkus</groupId>
     <artifactId>quarkus-jdbc-mysql</artifactId>
 </dependency>
-<dependency>                    -> ORM
+<dependency>                        -> ORM
     <groupId>io.quarkus</groupId>
     <artifactId>quarkus-hibernate-orm-panache</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.quarkus</groupId>   -> Validar perfil
+    <artifactId>quarkus-security-jpa</artifactId>
 </dependency>
 ````
 
 ## Injeção de dependências - @Inject
+
 ````
 javax.enterprise.context.ApplicationScoped: 
 Uma única instância do bean é criada e compartilhada por todos os pontos de injeção. 

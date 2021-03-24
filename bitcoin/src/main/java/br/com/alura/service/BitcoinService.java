@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * configKey = "bitcoin-api" <- Utilizada no application.properties
+ *
  * @Path("/bitcoins") <- Da API que vou chamar - https://alura-bitcoin.herokuapp.com/bitcoins
  */
 @Path("/bitcoins")

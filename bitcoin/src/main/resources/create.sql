@@ -23,3 +23,5 @@ CREATE TABLE `Ordem`
     PRIMARY KEY (`id`),
     FOREIGN KEY (`user_id`) REFERENCES `Usuario` (`id`)
 ) ENGINE = InnoDB;
+
+ALTER TABLE Usuario ADD COLUMN role VARCHAR(55);
