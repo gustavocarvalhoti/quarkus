@@ -86,6 +86,14 @@ docker run --name mysql8 --network host -e MYSQL_ROOT_PASSWORD=root -d mysql:lat
     <groupId>io.quarkus</groupId>   -> Validar perfil
     <artifactId>quarkus-security-jpa</artifactId>
 </dependency>
+<dependency>                        -> Mocar test
+    <groupId>io.quarkus</groupId>
+    <artifactId>quarkus-panache-mock</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.quarkus</groupId>   -> Mocar test
+    <artifactId>quarkus-junit5-mockito</artifactId>
+</dependency>
 ````
 
 ## Injeção de dependências - @Inject
