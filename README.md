@@ -20,12 +20,12 @@ package -Pnative -Dquarkus.native.container-build=true  <- Criar um run maven
 ./bitcoin-1.0.0-SNAPSHOT-runner                         <- Start Imagem nativa, muito rápido \0/
 ````
 
-![img1.png](img1.png)
-![img2.png](img2.png)
-![img7.png](img7.png)
-![img3.png](img3.png)
-![img4.png](img4.png)
-![img6.png](img6.png)
+![img1.png](./src/public/img1.png)
+![img2.png](./src/public/img2.png)
+![img7.png](./src/public/img7.png)
+![img3.png](./src/public/img3.png)
+![img4.png](./src/public/img4.png)
+![img6.png](./src/public/img6.png)
 
 ## Tecnologias e metodologias utilizadas
 
@@ -52,7 +52,7 @@ MySQL no Docker ->
 docker run --name mysql8 --network host -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
 ````
 
-![img5.png](img5.png)
+![img5.png](./src/public/img5.png)
 
 ## Dependências
 
