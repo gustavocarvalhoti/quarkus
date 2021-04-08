@@ -1,9 +1,0 @@
-/home/gustavo/dev-tools/projects/quarkus/src/main/java/br/com/alura/model/Bitcoin.java
-/home/gustavo/dev-tools/projects/quarkus/src/main/java/br/com/alura/model/Usuario.java
-/home/gustavo/dev-tools/projects/quarkus/src/main/java/br/com/alura/service/OrdemService.java
-/home/gustavo/dev-tools/projects/quarkus/src/main/java/br/com/alura/service/BitcoinService.java
-/home/gustavo/dev-tools/projects/quarkus/src/main/java/br/com/alura/resource/UsuarioResource.java
-/home/gustavo/dev-tools/projects/quarkus/src/main/java/br/com/alura/repository/OrdemRepository.java
-/home/gustavo/dev-tools/projects/quarkus/src/main/java/br/com/alura/model/Ordem.java
-/home/gustavo/dev-tools/projects/quarkus/src/main/java/br/com/alura/resource/BitcoinResource.java
-/home/gustavo/dev-tools/projects/quarkus/src/main/java/br/com/alura/resource/OrdemResource.java
