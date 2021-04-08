@@ -29,10 +29,13 @@ package -Pnative -Dquarkus.native.container-build=true  <- Criar um run maven
 ## Tecnologias e metodologias utilizadas
 
 ````
+Maven
 Quarkus
 MySQL
 Validação de perfil - rules com quarkus-security
 ORM
+Junit
+Mokito
 ````
 
 ## Instalar
