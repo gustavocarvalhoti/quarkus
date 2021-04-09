@@ -26,6 +26,8 @@ package -Pnative -Dquarkus.native.container-build=true  <- Criar um run maven
 ![img3.png](./src/public/img3.png)
 ![img4.png](./src/public/img4.png)
 ![img6.png](./src/public/img6.png)
+![img8.png](./src/public/img8.png)
+![img9.png](./src/public/img9.png)
 
 ## Tecnologias e metodologias utilizadas
 
